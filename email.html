@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemtra(mail) {
+        mau=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (mau.test(mail)){
+            return true;
+        }
+        return false;
+    }
+    let mau1="a@gmail.com";
+    let mau2="ad@gmail.com";
+    let mau3="abc@gmail.com";
+    let mau4="@gmail.com";
+    let mau5="ab@gmail.";
+    let mau6="@#abc@gmail.com";
+    console.log(mau1+ ":"+kiemtra(mau1));
+    console.log(mau2+ ":"+kiemtra(mau2));
+    console.log(mau3+ ":"+kiemtra(mau3));
+    console.log(mau4+ ":"+kiemtra(mau4));
+    console.log(mau5+ ":"+kiemtra(mau5));
+    console.log(mau6+ ":"+kiemtra(mau6));
+</script>
+</body>
+</html>
